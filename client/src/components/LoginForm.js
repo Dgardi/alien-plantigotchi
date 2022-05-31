@@ -5,10 +5,9 @@ import '../styles/styles.css';
 
 export default function Login () {
     // Here we set two state variables for firstName and lastName using `useState`
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [userName, setUserName] = useState('');
     const [emailSubmission, setEmailSubmission] = useState('');
-    const [messageSubmission, setMessageSubmission] = useState('');
+    const [passwordSubmission, setPasswordSubmission] = useState('');
   
     const handleInputChange = (e) => {
       // Getting the value and name of the input which triggered the change
@@ -17,7 +16,7 @@ export default function Login () {
   
       switch(name) {
         case "userName":
-            userName(value)
+            setUserName(value)
           break;
         case "emailSubmission":
             setEmailSubmission(value)
