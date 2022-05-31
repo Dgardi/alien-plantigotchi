@@ -41,7 +41,7 @@ function App() {
     <div>
       <Header setSelectedPage={setSelectedPage} />
       {/* <NavTabs setSelectedPage = {setSelectedPage} sarah={"test"}/> */}
-      {selectedPage === "Portfolio" && <Portfolio/>}
+      {selectedPage === "LoginPage" && <LoginPage/>}
       {selectedPage === "About" && <About/>}
       {selectedPage === "Resume" && <Resume />}
       {selectedPage === "Contact" && <Contact />}
