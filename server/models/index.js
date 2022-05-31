@@ -1,3 +1,3 @@
 const User = require("./User")
-const User = require("./Plant1")
-const User = require("./Plant2")
+const User = require("./Plant")
+const User = require("./CustomPlants")
