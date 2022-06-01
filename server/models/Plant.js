@@ -27,7 +27,7 @@ const plantSchema = new Schema (
         },
         createdAt: {
             type: Date,
-            default: moment().format()
+            default: moment()
         }
     }
 )
