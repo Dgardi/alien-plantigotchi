@@ -4,11 +4,28 @@ export default function AlienPlant ({stage}) {
     console.log(stage)
         return(
             <div>
-              <img src={photoArray[stage]} alt="Plant in various stages" width="500" height="600"></img>  
+              <img src={photoArray[stage]} alt="AlienPlant in various stages" width="500" height="600"></img>  
 
+                {/* const expr = 'AlienPlantActions';
+                switch (AlienPlantActions) {
+                case 'AlienStage1':
+                    console.log('Oranges are $0.59 a pound.');
+                    <div>
+                        <button type="button">Water</button>
+                        <button type="button">Sun</button>
+                        <button type="button">Fertilizer</button>
+                        <button type="button">Sing</button>
+                    </div>
+                    break;
+                case 'AlienStage2':
+                    break; 
+                case 'AlienStage3':
+                    console.log('Mangoes and papayas are $2.79 a pound.');
+                    break;
+                default:
+                    console.log(`Sorry, an error occured loading the actions.`);
+                    } */}
             </div>
+
         )
-
-
-
 }
