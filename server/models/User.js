@@ -18,7 +18,13 @@ const userSchema = new Schema (
             type: String,
             require: true,
         },
-        plants: [
+        currentPlants: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Plant"
+            }
+        ],
+        finishedPlants: [
             {
                 type: Schema.Types.ObjectId,
                 ref: "Plant"

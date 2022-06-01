@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose")
+const moment = require("moment");
 
 const plantSchema = new Schema (
     {
@@ -19,6 +20,14 @@ const plantSchema = new Schema (
         },
         cooldownTimer: {
             type: Date,
+        },
+        finished: {
+            type: Boolean,
+            default: false
+        },
+        createdAt: {
+            type: Date,
+            default: moment().format()
         }
     }
 )
