@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ActionButtons(props) {
+function AlienActionButtons(props) {
   const {setSelectedPage} = props
   const clickHandler = (event) => {
     setSelectedPage(event.target.value)
@@ -27,4 +27,4 @@ function ActionButtons(props) {
   );
 }
 
-export default ActionButtons;
+export default AlienActionButtons;
