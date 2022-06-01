@@ -49,7 +49,7 @@ export default function Login () {
     return (
       <div>
         <p>
-          Get in touch: 
+          Create an account: 
         </p>
         <form className="form">
           <input
