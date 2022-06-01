@@ -20,9 +20,9 @@ function ActionButtons(props) {
       <li className="action-item" onClick = {() => setSelectedPage("Singing")}>
           Singing
       </li>
-      <li className="action-item" onClick = {() => setSelectedPage("Decorate")}>
+      {/* <li className="action-item" onClick = {() => setSelectedPage("Decorate")}>
           Decorate
-      </li>
+      </li> */}
     </ul>
   );
 }
