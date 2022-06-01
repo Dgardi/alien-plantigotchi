@@ -1,4 +1,4 @@
-const { Schema, Types } = require("mongoose")
+const { Schema, model } = require("mongoose")
 
 const userSchema = new Schema (
     {
@@ -17,6 +17,25 @@ const userSchema = new Schema (
             type: String,
             require: true,
         },
-
+        plants: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Plant"
+            }
+        ]
+    },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false
     }
-)
+);
+
+userSchema.virtual("numberOfPlants").get(function() {
+    return this.plants.length;
+});
+
+const User = model("User", userSchema);
+
+module.exports = User;
