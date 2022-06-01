@@ -9,7 +9,6 @@ const user = {
 
 const plants = {
     name: "Petey",
-    owner: 1,
     earthPlant: true,
 }
 
@@ -18,8 +17,8 @@ connection.once("open", async () => {
     await User.deleteMany({});
     await Plant.deleteMany({});
 
-    await User.collection.insertOne(user);
-    await Plant.collection.insertOne(plants);
+    await User.create(user);
+    await Plant.create(plants);
 
     // const thoughtsData = Thought.find({});
 
