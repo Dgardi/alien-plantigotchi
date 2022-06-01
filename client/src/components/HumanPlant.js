@@ -4,7 +4,7 @@ export default function HumanPlant ({stage}) {
     console.log(stage)
         return(
             <div>
-              <img src={photoArray[stage]} alt="Plant in various stages" width="500" height="600"></img>  
+              <img src={photoArray[stage]} alt="Human plant in various stages" width="500" height="600"></img>  
 
             </div>
         )
