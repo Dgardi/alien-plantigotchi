@@ -32,8 +32,8 @@ function MainPage() {
         </div>
       {/* <MainPage /> */}
       {/* <NavTabs setSelectedPage = {setSelectedPage} sarah={"test"}/> */}
-     {/* {selectedPage === "LoginPage" && <LoginPage/>}
-      {selectedPage === "MainPage" && <MainPage/>} */} 
+      {/* {selectedPage === "LoginPage" && <LoginPage/>}
+      {selectedPage === "MainPage" && <MainPage/>} */}
     </div>
   );
 }
