@@ -8,7 +8,6 @@ export default function LoginPage() {
     <div className="parentWrapper">
       <div>
         <h2>Log in or sign up</h2>
-        <div>{/* add in images here */}</div>
       </div>
       <LoginForm />
       <SignUpForm />
