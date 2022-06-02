@@ -1,5 +1,6 @@
 // import '../styles/styles.css';
 import LoginForm from "../components/LoginForm";
+import SignUpForm from "../components/SignUpForm";
 import React from "react";
 
 export default function LoginPage() {
@@ -10,6 +11,7 @@ export default function LoginPage() {
         <div>{/* add in images here */}</div>
       </div>
       <LoginForm />
+      <SignUpForm />
     </div>
   );
 }
