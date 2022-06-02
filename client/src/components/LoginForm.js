@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { loginUser } from '../utils/API';
 // import '../styles/styles.css';
 
 export default function Login() {
@@ -10,15 +11,11 @@ export default function Login() {
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
-    //   console.log(e.target)
 
     switch (name) {
       case "userName":
         setUserName(value);
         break;
-      // case "emailSubmission":
-      //   setEmailSubmission(value);
-      //   break;
       case "passwordSubmission":
         setPasswordSubmission(value);
         break;
@@ -28,22 +25,28 @@ export default function Login() {
     return null;
   };
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // Prevents clearing the form
 
-    console.log(e);
-    console.log(userName, passwordSubmission);
+    // Makes object will all required data for login route
+    const userData = {
+      username: userName,
+      password: passwordSubmission
+    }
 
-    // var pattern = new RegExp(
-    //   /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
-    // );
+    // Runs loginUser fetch request with userData object
+    try {
+      const response = await loginUser(userData);
 
-    // if (!pattern.test(emailSubmission)) {
-    //   document.getElementById("errors").style = "display: block";
-    // } else {
-    //   document.getElementById("errors").style = "display: none";
-    // }
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
+
+      // const user = await response.json();
+      console.log("SUCCESS!!");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -58,23 +61,11 @@ export default function Login() {
           placeholder="User Name"
         />
         <br></br>
-        {/* <input
-          value={emailSubmission}
-          name="emailSubmission"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="Email"
-        />
-        <br></br> */}
-        {/* <div id="errors">
-          <p>Invalid email</p>
-        </div> */}
         <input
           value={passwordSubmission}
           name="passwordSubmission"
           onChange={handleInputChange}
-          //DO WE NEED TO CHANGE THE TYPE???
-          type="text"
+          type="password"
           placeholder="Password"
         />
         <br></br>
