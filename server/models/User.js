@@ -54,7 +54,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 userSchema.virtual("numberOfPlants").get(function() {
-    return this.plants.length;
+    return this.finishedPlants.length;
 });
 
 const User = model("User", userSchema);

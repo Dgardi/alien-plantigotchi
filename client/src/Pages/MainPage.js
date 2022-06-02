@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import AlienPlant from '../components/AlienPlant'; 
 import HumanPlant from '../components/HumanPlant';
 import AlienActionButtons from "../components/AlienActionButtons"
