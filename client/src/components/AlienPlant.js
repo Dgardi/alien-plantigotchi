@@ -1,30 +1,55 @@
+import alienPlant_stage1 from "../../src/assets/alienPlant_stage1.png"
+import alienPlant_stage2 from "../../src/assets/alienPlant_stage2.png"
+import alienPlant_stage3 from "../../src/assets/alienPlant_stage3.png"
+import alienPlant_stage4 from "../../src/assets/alienPlant_stage4.png"
+import alienPlant_stage5 from "../../src/assets/alienPlant_stage5.png"
+
 export default function AlienPlant ({stage}) {
 
-    let photoArray = ["https://drive.google.com/file/d/1-n4AUZ9vHD2Q0BykHRp3KSExOR6wx3p-/view?usp=sharing", "https://media.istockphoto.com/photos/apple-seeds-isolated-over-white-picture-id1029888184?k=20&m=1029888184&s=612x612&w=0&h=RkbKIBWhzsMoEYwOhZJJOGUfRE-lDQH5uyTQwf8JkL4=", "https://basmati.com/sites/default/files/styles/large/public/2020-08/shutterstock_560935330.jpg?itok=GCz_E4AB"]; 
+    let photoArray = [alienPlant_stage1, alienPlant_stage2, alienPlant_stage3, alienPlant_stage4, alienPlant_stage5]; 
     console.log(stage)
-        return(
-            <div>
-              <img src={photoArray[stage]} alt="AlienPlant in various stages" width="500" height="600"></img>  
-
-                {/* const expr = 'AlienPlantActions';
-                switch (AlienPlantActions) {
+        
+    
+    const expr = () => {
+                switch ("AlienStage1") {
                 case 'AlienStage1':
-                    console.log('Oranges are $0.59 a pound.');
+                    console.log('stage 1')
+                    return(
                     <div>
                         <button type="button">Water</button>
                         <button type="button">Sun</button>
                         <button type="button">Fertilizer</button>
                         <button type="button">Sing</button>
-                    </div>
-                    break;
+                    </div>)
                 case 'AlienStage2':
-                    break; 
+                    console.log('stage 2');
+                    return(
+                    <div>
+                        <button type="button">Water</button>
+                        <button type="button">Sun</button>
+                        <button type="button">Fertilizer</button>
+                        <button type="button">Sing</button>
+                    </div>)
                 case 'AlienStage3':
-                    console.log('Mangoes and papayas are $2.79 a pound.');
-                    break;
+                    console.log('stage 3');
+                    return(
+                    <div>
+                        <button type="button">Water</button>
+                        <button type="button">Sun</button>
+                        <button type="button">Fertilizer</button>
+                        <button type="button">Sing</button>
+                    </div>)
                 default:
                     console.log(`Sorry, an error occured loading the actions.`);
-                    } */}
+                    }
+                }
+    
+    
+    return(
+            <div>
+              <img src={photoArray[stage]} className="alienPlantPic" alt="AlienPlant in various stages"></img>  
+              {expr()}
+            
             </div>
 
         )
