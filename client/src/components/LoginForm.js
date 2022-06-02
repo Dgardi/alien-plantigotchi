@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { loginUser } from '../utils/API';
+import { useLogin } from '../utils/UserContext'
 // import '../styles/styles.css';
 
 export default function Login() {
@@ -7,6 +8,7 @@ export default function Login() {
   const [userName, setUserName] = useState("");
   // const [emailSubmission, setEmailSubmission] = useState("");
   const [passwordSubmission, setPasswordSubmission] = useState("");
+  const { currentUser, updateUser } = useLogin();
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -42,11 +44,17 @@ export default function Login() {
         throw new Error('something went wrong!');
       }
 
-      // const user = await response.json();
-      console.log("SUCCESS!!");
+      // parse response so it comes back as an accessable User document
+      const user = await response.json();
+
+      updateUser(user);
+
+      console.log(currentUser);
+
     } catch (err) {
       console.log(err);
     }
+
   };
 
   return (

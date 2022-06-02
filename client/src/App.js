@@ -1,26 +1,43 @@
-// import logo from './logo.svg';
-// import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+// State that holds current user data we want to be accessable to all children
+import UserProvider from './utils/UserContext'
+
+import LoginPage from "./pages/LoginPage";
+import MainPage from "./pages/MainPage";
+
+
+
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    <p> THIS IS A TEST</p>
-    // </div>
+    <div>
+      <UserProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/home" element={<MainPage />} />
+            {/* <Route
+              exact
+              path="/home"
+              render={() =>
+                loggedIn ? <Redirect to="/" /> : <MainPage />
+              }
+            /> */}
+          </Routes>
+        </Router>
+      </UserProvider> 
+    </div>
   );
 }
 
 export default App;
+
+
+
