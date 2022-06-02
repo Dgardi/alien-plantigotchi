@@ -1,14 +1,14 @@
 import React from 'react';
-
-function AlienActionButtons(props) {
+import blonk from "../../src/assets/blonk.png"
+function Character(props) {
   const {setSelectedPage} = props
   const clickHandler = (event) => {
     setSelectedPage(event.target.value)
     console.log(event.target.value)
   }
   return (
-    <p>This plant's name is: </p>
+    <img src={blonk} alt="Alien character" width="500" height="600"></img> 
   );
 }
 
-export default AlienActionButtons;
+export default Character;

@@ -12,7 +12,7 @@ getPlants(req, res) {
 // Get A Single Plant
 
 getPlant(req, res) {
-    Plant.findOne({_id: req.params.id})
+    Plant.findOne({_id: req.params.plantId})
     .select('-__v')
     .then((plant) =>
     ! plant
@@ -36,7 +36,7 @@ createPlant(req, res) {
 // Update a Plant
 updatePlant(req, res) {
     Plant.findOneAndUpdate(
-        {_id: req.params.id},
+        {_id: req.params.plantId},
         {$set: req.body},
         {runValidators:true, new:true}
     )
@@ -50,12 +50,29 @@ updatePlant(req, res) {
 
 // Delete a Plant
 
+// deletePlant(req,res) {
+//     Plant.findOneAndDelete({ _id: req.params.plantId})
+//     .then((plant) =>
+//     ! plant
+//     ? res.status(404).json({ message: 'No plant with that ID!'})
+//     : User.deleteMany({ _id: {$in: plant.username}}))
+// }
+
 deletePlant(req,res) {
-    Plant.findOneAndDelete({ _id: req.params.id})
-    .then((thought) =>
-    ! plant
-    ? res.status(404).json({ message: 'No plant with that ID!'})
-    //! Okay. Not totally sure this is right.
-    : User.deleteMany({ _id: {$in: plant.username}}))
-}
+    Plant.findOneAndDelete({ _id: req.params.plantId})
+    .then((plant) =>{
+        if (!plant) {
+            return res.status(404).json({ message: 'No Plant with that id!'});
+        } 
+        res.json(plant);
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+
+    });
+
+
+},
 };
+
