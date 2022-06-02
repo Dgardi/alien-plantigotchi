@@ -1,12 +1,12 @@
-import alienPlant_stage1 from "../../src/assets/alienPlant_stage1.png"
-import alienPlant_stage2 from "../../src/assets/alienPlant_stage2.png"
-import alienPlant_stage3 from "../../src/assets/alienPlant_stage3.png"
-import alienPlant_stage4 from "../../src/assets/alienPlant_stage4.png"
-import alienPlant_stage5 from "../../src/assets/alienPlant_stage5.png"
+// import alienPlant_stage1 from "../../src/assets/alienPlant_stage1.png"
+// import alienPlant_stage2 from "../../src/assets/alienPlant_stage2.png"
+// import alienPlant_stage3 from "../../src/assets/alienPlant_stage3.png"
+// import alienPlant_stage4 from "../../src/assets/alienPlant_stage4.png"
+// import alienPlant_stage5 from "../../src/assets/alienPlant_stage5.png"
 
 export default function AlienPlant ({stage}) {
 
-    let photoArray = [alienPlant_stage1, alienPlant_stage2, alienPlant_stage3, alienPlant_stage4, alienPlant_stage5]; 
+    let photoArray = ["https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage1.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage2.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage3.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage4.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage5.png"]; 
     console.log(stage)
         
     

@@ -4,7 +4,7 @@ import humanflower_stage3 from "../../src/assets/humanflower_stage3.png"
 
 export default function HumanPlant ({stage}) {
 
-    let photoArray = [humanflower_stage1, humanflower_stage2, humanflower_stage3]; 
+    let photoArray = ["https://plantigotchi.s3.us-east-2.amazonaws.com/humanflower_stage1.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/humanflower_stage2.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/humanflower_stage3.png"]; 
     const expr = () => {
         switch ("HumanStage1") {
         case 'HumanStage1':
