@@ -14,6 +14,7 @@ import '../styles/index.css';
 // In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
 function MainPage() {
   const [alienPlantPhase, setAlienPlantPhase] = useState(0)
+  //! const [testState, setTestState] = useState({'lifepoints' : 0 , 'stage' : 1,  } )
   const [humanPlantPhase, setHumanPlantPhase] = useState(0)
   return (
     <div className="mainPageRender">
