@@ -10,12 +10,19 @@ import LoginPage from "./LoginPage";
 // import MainPage from "./components/MainPage"
 import HumanActionButtons from '../components/HumanActionButtons';
 import '../styles/index.css';
+import { useLogin } from '../utils/UserContext'
 
 // In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
 function MainPage() {
   const [alienPlantPhase, setAlienPlantPhase] = useState(0)
   //! const [testState, setTestState] = useState({'lifepoints' : 0 , 'stage' : 1,  } )
   const [humanPlantPhase, setHumanPlantPhase] = useState(0)
+  const { currentUser, updateUser } = useLogin();
+
+  // useEffect(() => {
+  //   console.log(currentUser);
+  // }, [])
+
   return (
     <div className="mainPageRender">
         <div className="characterBox">

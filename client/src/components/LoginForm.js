@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { loginUser } from '../utils/API';
 import { useLogin } from '../utils/UserContext'
+import { useNavigate } from "react-router-dom";
 // import '../styles/styles.css';
 
 export default function Login() {
@@ -8,7 +9,8 @@ export default function Login() {
   const [userName, setUserName] = useState("");
   // const [emailSubmission, setEmailSubmission] = useState("");
   const [passwordSubmission, setPasswordSubmission] = useState("");
-  const { currentUser, updateUser } = useLogin();
+  const { updateUser } = useLogin();
+  const nav = useNavigate();
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -49,7 +51,7 @@ export default function Login() {
 
       updateUser(user);
 
-      console.log(currentUser);
+      nav("/home");
 
     } catch (err) {
       console.log(err);
