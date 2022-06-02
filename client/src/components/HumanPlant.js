@@ -1,6 +1,6 @@
-import humanflower_stage1 from "../../src/assets/humanflower_stage1.png"
-import humanflower_stage2 from "../../src/assets/humanflower_stage2.png"
-import humanflower_stage3 from "../../src/assets/humanflower_stage3.png"
+// import humanflower_stage1 from "../../src/assets/humanflower_stage1.png"
+// import humanflower_stage2 from "../../src/assets/humanflower_stage2.png"
+// import humanflower_stage3 from "../../src/assets/humanflower_stage3.png"
 
 export default function HumanPlant ({stage}) {
 
