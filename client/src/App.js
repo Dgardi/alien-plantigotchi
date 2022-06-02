@@ -15,6 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/home" element={<MainPage />} />
           {/* <Route
             exact
             path="/home"
@@ -29,3 +30,6 @@ function App() {
 }
 
 export default App;
+
+
+

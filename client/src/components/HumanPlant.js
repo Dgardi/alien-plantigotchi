@@ -1,14 +1,51 @@
+import humanflower_stage1 from "../../src/assets/humanflower_stage1.png"
+import humanflower_stage2 from "../../src/assets/humanflower_stage2.png"
+import humanflower_stage3 from "../../src/assets/humanflower_stage3.png"
+
 export default function HumanPlant ({stage}) {
 
-    let photoArray = ["https://drive.google.com/file/d/1-n4AUZ9vHD2Q0BykHRp3KSExOR6wx3p-/view?usp=sharing", "https://media.istockphoto.com/photos/apple-seeds-isolated-over-white-picture-id1029888184?k=20&m=1029888184&s=612x612&w=0&h=RkbKIBWhzsMoEYwOhZJJOGUfRE-lDQH5uyTQwf8JkL4=", "https://basmati.com/sites/default/files/styles/large/public/2020-08/shutterstock_560935330.jpg?itok=GCz_E4AB"]; 
-    console.log(stage)
-        return(
+    let photoArray = [humanflower_stage1, humanflower_stage2, humanflower_stage3]; 
+    const expr = () => {
+        switch ("HumanStage1") {
+        case 'HumanStage1':
+            console.log('stage 1')
+            return(
             <div>
-              <img src={photoArray[stage]} alt="Human plant in various stages" width="500" height="600"></img>  
+                <button type="button">Water</button>
+                <button type="button">Sun</button>
+                <button type="button">Fertilizer</button>
+                <button type="button">Sing</button>
+            </div>)
+        case 'HumanStage2':
+            console.log('stage 2');
+            return(
+            <div>
+                <button type="button">Water</button>
+                <button type="button">Sun</button>
+                <button type="button">Fertilizer</button>
+                <button type="button">Sing</button>
+            </div>)
+        case 'HumanStage3':
+            console.log('stage 3');
+            return(
+            <div>
+                <button type="button">Water</button>
+                <button type="button">Sun</button>
+                <button type="button">Fertilizer</button>
+                <button type="button">Sing</button>
+            </div>)
+        default:
+            console.log(`Sorry, an error occured loading the actions.`);
+            }
+        }
 
-            </div>
-        )
 
+return(
+    <div className="humanPlanDiv">
+      <img src={photoArray[stage]} className="humanPlantPic" alt="HumanPlant in various stages" />
+      {expr()}
+    
+    </div>
 
-
+)
 }

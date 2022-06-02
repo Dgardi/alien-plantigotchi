@@ -7,23 +7,7 @@ function HumanActionButtons(props) {
     console.log(event.target.value)
   }
   return (
-    <ul className="action-buttons">
-      <li className="action-item" onClick = {() => setSelectedPage("Water")}>
-          Water
-      </li>
-      <li className="action-item" onClick = {() => setSelectedPage("Sunlight")}>
-          Sunlight
-      </li>
-      <li className="action-item" onClick = {() => setSelectedPage("Fertilizer")}>
-          Fertilizer
-      </li>
-      <li className="action-item" onClick = {() => setSelectedPage("Singing")}>
-          Singing
-      </li>
-      {/* <li className="action-item" onClick = {() => setSelectedPage("Decorate")}>
-          Decorate
-      </li> */}
-    </ul>
+    <p>This plant's name is: </p>
   );
 }
 

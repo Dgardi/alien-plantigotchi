@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("https://drive.google.com/file/d/1GLeqQ-XEOQKwb1tUKbzMbcjqnN8kfP0C/view?usp=sharing"); */
+  height: 100vh;
   background-image: url(../../public/landscape.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,15 +17,47 @@ code {
     monospace;
 }
 
+.mainPageRender{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    /* gap: 50px;  */
+    padding: 20px;
+    background-image: url("../../src/assets/landscape.png");
+    background-size: cover; 
+}
+
+.mainPageRender div{
+  flex: 1 1 33%;
+  max-width: 33vw; 
+}
+
+.humanPlantPic {
+  width: 36%;
+}
+.alienPlantPic {
+  width: 50%;
+}
+
+.alienBox{
+  padding-top: 175px;
+}
+
+.humanBox {
+  padding-top: 230px;
+}
+
+#root{
+  height: 100%; 
+}
 .mainPageRender {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 50px;
   padding: 20px;
 }
 
 .parentWrapper {
-  /* background-color: lightgreen; */
   text-align: center;
   height: 100%;
 }
