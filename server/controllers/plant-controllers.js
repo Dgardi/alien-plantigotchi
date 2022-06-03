@@ -22,6 +22,24 @@ getPlant(req, res) {
     .catch((err) => res.status(500).json(err))
 },
 
+
+// Get User's Plants
+
+async getUserPlants (req, res) {
+    try {
+        // Find all users and populate their respective thoughts
+        const userPlants = await Plant.find({
+            owner: req.params.userId,
+            finished: false
+        });
+
+        res.status(200).json(userPlants);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err)
+    }
+},
+
 // Create a Plant
 
 createPlant(req, res) {

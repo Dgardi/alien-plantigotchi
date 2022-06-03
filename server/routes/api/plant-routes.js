@@ -3,6 +3,7 @@ const router = require('express').Router();
 const {
     getPlants,
     getPlant,
+    getUserPlants,
     createPlant,
     deletePlant,
     updatePlant,
@@ -11,6 +12,8 @@ const {
 // /api/plants
 
 router.route('/').post(createPlant).get(getPlants);
+
+router.route("/:userId").get(getUserPlants);
 
 router.route('/:plantId').delete(deletePlant).put(updatePlant).get(getPlant);
 
