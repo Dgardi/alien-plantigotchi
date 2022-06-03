@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import alienPlant_stage1 from "../../src/assets/alienPlant_stage1.png"
 // import alienPlant_stage2 from "../../src/assets/alienPlant_stage2.png"
 // import alienPlant_stage3 from "../../src/assets/alienPlant_stage3.png"
 // import alienPlant_stage4 from "../../src/assets/alienPlant_stage4.png"
 // import alienPlant_stage5 from "../../src/assets/alienPlant_stage5.png"
 
-export default function AlienPlant ({stage}) {
+export default function AlienPlant ({stage, setAlienPlantPhase, alienPlantPhase}) {
 
     let photoArray = ["https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage1.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage2.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage3.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage4.png", "https://plantigotchi.s3.us-east-2.amazonaws.com/alienPlant_stage5.png"]; 
     console.log(stage)
   
-     // Declare a new state variable, which we'll call "count"
-    const [lifePoints, setLifePoints] = useState(0);
-    
+     // Declare a new state variable
+    let [lifePoints, setLifePoints] = useState(0);
+    useEffect(() => {
+        if (lifePoints <5){
+            setAlienPlantPhase(0)
+        } else if  (lifePoints>=5 && lifePoints <10){
+        setAlienPlantPhase(1)
+        } else if (lifePoints>=10 && lifePoints <20){
+            setAlienPlantPhase(2)
+        } else if (lifePoints>=20 && lifePoints <30){
+            setAlienPlantPhase(3)
+        } else if (lifePoints>=30 && lifePoints <40){
+            setAlienPlantPhase(4)
+        } else if (lifePoints>=40){
+            setAlienPlantPhase(5) } 
+    }, [lifePoints])
     const expr = () => {
                 switch ("AlienStage1") {
                 case 'AlienStage1':
