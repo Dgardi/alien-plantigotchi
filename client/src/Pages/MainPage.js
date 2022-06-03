@@ -14,29 +14,24 @@ import '../styles/index.css';
 // In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
 function MainPage() {
   const [alienPlantPhase, setAlienPlantPhase] = useState(0)
-  //! const [testState, setTestState] = useState({'lifepoints' : 0 , 'stage' : 1,  } )
+  
   const [humanPlantPhase, setHumanPlantPhase] = useState(0)
-  return (
-    <div className="mainPageRender">
+  return <div className="mainPageRender">
         <div className="characterBox">
           <Character />
         </div>
         <div className="alienBox">
-          <AlienPlant stage={alienPlantPhase} />
-          <button id="mainButton" onClick={() => {setAlienPlantPhase(alienPlantPhase + 1)}}>Increase</button>
+          <AlienPlant stage={alienPlantPhase} setAlienPlantPhase={setAlienPlantPhase} alienPlantPhase={alienPlantPhase}/>
+          {/* <button id="mainButton" onClick={() => {setAlienPlantPhase(alienPlantPhase + 1)}}>Increase</button> */}
           <AlienActionButtons />
         </div>
         <div className="humanBox">
-          <HumanPlant stage={humanPlantPhase} />
-          <button id="mainButton" onClick={() => {setHumanPlantPhase(humanPlantPhase + 1)}}>Increase</button>
+          <HumanPlant stage={humanPlantPhase} setHumanPlantPhase={setHumanPlantPhase}
+          humanPlantPhase={humanPlantPhase} />
+          {/* <button id="mainButton" onClick={() => {setHumanPlantPhase(humanPlantPhase + 1)}}>Increase</button> */}
           <HumanActionButtons />
         </div>
-      {/* <MainPage /> */}
-      {/* <NavTabs setSelectedPage = {setSelectedPage} sarah={"test"}/> */}
-      {/* {selectedPage === "LoginPage" && <LoginPage/>}
-      {selectedPage === "MainPage" && <MainPage/>} */}
     </div>
-  );
 }
 
 export default MainPage;
