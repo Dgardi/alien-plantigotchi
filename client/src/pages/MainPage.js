@@ -10,6 +10,7 @@ import LoginPage from "./LoginPage";
 // import MainPage from "./components/MainPage"
 import HumanActionButtons from "../components/HumanActionButtons";
 import "../styles/index.css";
+import Header from "../components/Header";
 
 // In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
 function MainPage() {
@@ -18,13 +19,7 @@ function MainPage() {
   const [humanPlantPhase, setHumanPlantPhase] = useState(0);
   return (
     <div>
-      <div>
-        <img
-          className="header"
-          src="https://plantigotchi.s3.us-east-2.amazonaws.com/plantagotchi_logo.png"
-          alt="header logo"
-        ></img>
-      </div>
+      <Header />
       <div className="mainPageRender">
         <div className="characterBox">
           <Character className="character" />

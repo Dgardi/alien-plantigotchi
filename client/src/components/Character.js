@@ -11,7 +11,6 @@ function Character(props) {
     <img
       src="https://plantigotchi.s3.us-east-2.amazonaws.com/blonk.png"
       alt="Alien character"
-      // width="400"
       height="550"
     ></img>
   );

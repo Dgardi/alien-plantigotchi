@@ -164,7 +164,7 @@ export default function AlienPlant({
             >
               🎶
             </button>
-            <p>Your plant has {lifePoints} life points</p>
+            <p className="lifepoint">Your plant has {lifePoints} life points</p>
           </div>
         );
       default:

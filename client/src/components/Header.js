@@ -1,12 +1,6 @@
 import React from "react";
-// import blonk from "../../src/assets/blonk.png"
-//https://plantigotchi.s3.us-east-2.amazonaws.com/blonk.png
-function Header(props) {
-  //   const {setSelectedPage} = props
-  //   const clickHandler = (event) => {
-  //     setSelectedPage(event.target.value)
-  //     console.log(event.target.value)
-  //   }
+
+function Header() {
   return (
     <div>
       <img
