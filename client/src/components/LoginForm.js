@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { loginUser } from '../utils/API';
+import { loginUser } from "../utils/API";
 // import '../styles/styles.css';
 
 export default function Login() {
@@ -31,15 +31,15 @@ export default function Login() {
     // Makes object will all required data for login route
     const userData = {
       username: userName,
-      password: passwordSubmission
-    }
+      password: passwordSubmission,
+    };
 
     // Runs loginUser fetch request with userData object
     try {
       const response = await loginUser(userData);
 
       if (!response.ok) {
-        throw new Error('something went wrong!');
+        throw new Error("something went wrong!");
       }
 
       // const user = await response.json();
@@ -54,6 +54,7 @@ export default function Login() {
       <p>Login:</p>
       <form className="form">
         <input
+          className="inputBox"
           value={userName}
           name="userName"
           onChange={handleInputChange}
@@ -62,6 +63,7 @@ export default function Login() {
         />
         <br></br>
         <input
+          className="inputBox"
           value={passwordSubmission}
           name="passwordSubmission"
           onChange={handleInputChange}

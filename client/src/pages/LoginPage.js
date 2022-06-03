@@ -11,9 +11,6 @@ export default function LoginPage() {
         <Header />
       </div>
       <div className="parentWrapper">
-        <div>
-          <h2>Log in or sign up</h2>
-        </div>
         <LoginForm />
         <SignUpForm />
       </div>

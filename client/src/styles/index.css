@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("https://drive.google.com/file/d/1GLeqQ-XEOQKwb1tUKbzMbcjqnN8kfP0C/view?usp=sharing"); */
   height: 100vh;
-  background-image: url(../../public/landscape.png);
+  background-color: #e3870f;
+  background-image: url("https://plantigotchi.s3.us-east-2.amazonaws.com/landscape_2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -20,11 +20,6 @@ code {
 .mainPageRender {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  /* gap: 50px;  */
-  padding: 20px;
-  background-image: url("https://plantigotchi.s3.us-east-2.amazonaws.com/landscape_2.png");
-  background-size: cover;
 }
 
 .mainPageRender div {
@@ -34,22 +29,26 @@ code {
 
 .humanPlantPic {
   width: 36%;
+  padding-left: 40px;
 }
+
 .alienPlantPic {
   width: 50%;
+  padding-left: 40px;
 }
 
 .alienBox {
-  padding-top: 175px;
+  padding-top: 30px;
 }
 
 .humanBox {
-  padding-top: 230px;
+  padding-top: 40px;
 }
 
 #root {
   height: 100%;
 }
+
 .mainPageRender {
   display: flex;
   flex-direction: row;
@@ -63,5 +62,32 @@ code {
 }
 
 .header {
-  background-image: url(../../public/landscape.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inputBox {
+  margin: 5px;
+}
+
+.emoji {
+  font-size: 3em;
+  background-color: #feb056;
+  border: 1px solid #feb056;
+  border-radius: 25px;
+  margin: 1px;
+}
+
+.emoji:hover {
+  background-color: #0fe3e1;
+  cursor: pointer;
+}
+
+p {
+  padding-left: 40px;
+}
+
+.characterBox {
+  padding-left: 10px;
 }
