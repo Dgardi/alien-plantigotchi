@@ -1,5 +1,14 @@
 
 
+// Get User Plants
+
+const getUserPlants = (userId) => {
+  return fetch(`api/plants/${userId}`, {
+      method: 'GET',
+      headers: {'Content-Type': 'application/json',},
+  });
+};
+
   //Create New Plant 
 
   const createPlant = (plantData) => {
@@ -10,8 +19,6 @@
     });
   };
 
-
-
 // Update Plant
 
 const updatePlant = (plantData) => {
@@ -21,8 +28,9 @@ const updatePlant = (plantData) => {
         body: JSON.stringify(plantData),  
     });
   };
-  
-// Delete Plant 
+
+// Delete Plant
+
   const deletePlant = (plantData) => {
     return fetch('api/plants/' + plantData.id, {
         method: 'DELETE',
@@ -31,4 +39,4 @@ const updatePlant = (plantData) => {
     });
   };
 
-module.exports = { plantRouter }
+module.exports = { getUserPlants }
