@@ -15,7 +15,7 @@
 // Update Plant
 
 const updatePlant = (plantData) => {
-    return fetch('api/plants/', {
+    return fetch('api/plants/' + plantData.id, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json',},
         body: JSON.stringify(plantData),  
@@ -24,7 +24,7 @@ const updatePlant = (plantData) => {
   
 // Delete Plant 
   const deletePlant = (plantData) => {
-    return fetch('api/plants/', {
+    return fetch('api/plants/' + plantData.id, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json',},
         body: JSON.stringify(plantData),  
