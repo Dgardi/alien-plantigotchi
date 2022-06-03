@@ -45,9 +45,9 @@ export default function SignUp() {
 
   return (
     <div>
-      <p>Create New Account:</p>
       <form className="form">
         <input
+          className="inputBox"
           value={userName}
           name="userName"
           onChange={handleInputChange}
@@ -56,6 +56,7 @@ export default function SignUp() {
         />
         <br></br>
         <input
+          className="inputBox"
           value={emailSubmission}
           name="emailSubmission"
           onChange={handleInputChange}
@@ -63,10 +64,8 @@ export default function SignUp() {
           placeholder="Email"
         />
         <br></br>
-        {/* <div id="errors">
-          <p>Invalid email</p>
-        </div> */}
         <input
+          className="inputBox"
           value={passwordSubmission}
           name="passwordSubmission"
           onChange={handleInputChange}

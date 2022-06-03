@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from "react";
+=======
 import React, { useState, useEffect} from 'react';
 
 
@@ -10,6 +13,7 @@ import React, { useState, useEffect} from 'react';
 //     'cooldownTimer': Date(),
 //     'createdAt': Date(),
 //     })
+>>>>>>> c7c0175dbbf726eda37fb121d1f9f66704b4bd28
 
 function AlienActionButtons(props) {
   // const {setSelectedPage} = props
@@ -17,9 +21,7 @@ function AlienActionButtons(props) {
   //   setSelectedPage(event.target.value)
   //   console.log(event.target.value)
   // }
-  return (
-    <p>This plant's name is: </p>
-  );
+  return <div></div>;
 }
 
 export default AlienActionButtons;
