@@ -7,10 +7,15 @@ const user = {
     password: "password123",
 }
 
-const plants = {
-    name: "Petey",
+const plant1 = {
+    name: "Alien",
+    earthPlant: false,
+};
+
+const plant2 = {
+    name: "Human",
     earthPlant: true,
-}
+};
 
 connection.once("open", async () => {
     // Delete all current data
@@ -19,12 +24,17 @@ connection.once("open", async () => {
 
     // Create new documents using data above
     await User.create(user);
-    await Plant.create(plants);
+    await Plant.create(plant1);
+    await Plant.create(plant2);
 
     const sampleUser = await User.findOne({ username: "user123"});
     
     await Plant.findOneAndUpdate(
-        { name: "Petey" },
+        { name: "Human" },
+        { owner: sampleUser._id }
+    );
+    await Plant.findOneAndUpdate(
+        { name: "Alien" },
         { owner: sampleUser._id }
     );
 

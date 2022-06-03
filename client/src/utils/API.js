@@ -1,7 +1,8 @@
 // This is where fetch request functions will be housed
 // const PORT = 3001;
+module.exports = {
 
-const loginUser = (userData) => {
+loginUser(userData) {
     return fetch('/api/users/login', {
       method: 'POST',
       headers: {
@@ -9,6 +10,6 @@ const loginUser = (userData) => {
       },
       body: JSON.stringify(userData),
     });
-};
+}
 
-module.exports = { loginUser }
+};

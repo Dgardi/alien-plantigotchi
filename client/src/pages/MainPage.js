@@ -8,6 +8,7 @@ import landscape from "../../src/assets/landscape.png";
 // import LoginForm from "./components/LoginForm";
 import LoginPage from "./LoginPage";
 // import MainPage from "./components/MainPage"
+<<<<<<< HEAD
 import HumanActionButtons from "../components/HumanActionButtons";
 import "../styles/index.css";
 import Header from "../components/Header";
@@ -21,6 +22,39 @@ function MainPage() {
     <div>
       <Header />
       <div className="mainPageRender">
+=======
+import HumanActionButtons from '../components/HumanActionButtons';
+import '../styles/index.css';
+import { getUserPlants } from '../utils/plant-apis';
+
+// In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
+function MainPage() {
+  const [alienPlantPhase, setAlienPlantPhase] = useState(0)
+  const [humanPlantPhase, setHumanPlantPhase] = useState(0)
+
+  const [plant1, setPlant1] = useState();
+  const [plant2, setPlant2] = useState();
+
+  useEffect(() => {
+    async function getAndSetPlantData() {
+      const getPlants = await getUserPlants("629a29249075dd2c1ac0e9d8");
+
+      const userPlants = getPlants.json();
+      
+      userPlants.then(res => {
+        console.log(res);
+        setPlant1(res[0]);
+        setPlant2(res[1]);
+      })
+    };
+
+    getAndSetPlantData();
+  }, [])
+
+  
+
+  return <div className="mainPageRender">
+>>>>>>> c7c0175dbbf726eda37fb121d1f9f66704b4bd28
         <div className="characterBox">
           <Character className="character" />
         </div>

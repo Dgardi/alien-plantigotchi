@@ -12,14 +12,10 @@ module.exports = {
         }
     },
 
-
-
     async login ({ body }, res) {
         try{
-            console.log(body)
             const user = await User.findOne({ username: body.username });
 
-            console.log(user);
             const correctPw = await user.isCorrectPassword(body.password);
 
             if (!correctPw) {
