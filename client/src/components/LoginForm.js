@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { loginUser } from "../utils/API";
-=======
-import { loginUser } from '../utils/API';
-import { useLogin } from '../utils/UserContext'
+import { useLogin } from "../utils/UserContext";
 import { useNavigate } from "react-router-dom";
->>>>>>> c7c0175dbbf726eda37fb121d1f9f66704b4bd28
 // import '../styles/styles.css';
 
 export default function Login() {
@@ -56,11 +52,9 @@ export default function Login() {
       updateUser(user);
 
       nav("/home");
-
     } catch (err) {
       console.log(err);
     }
-
   };
 
   return (
