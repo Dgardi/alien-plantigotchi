@@ -31,4 +31,4 @@ const updatePlant = (plantData) => {
     });
   };
 
-module.exports = { plantRouter }
+module.exports = { updatePlant };
