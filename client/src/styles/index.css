@@ -17,19 +17,19 @@ code {
     monospace;
 }
 
-.mainPageRender{
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    /* gap: 50px;  */
-    padding: 20px;
-    background-image: url("../../src/assets/landscape.png");
-    background-size: cover; 
+.mainPageRender {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  /* gap: 50px;  */
+  padding: 20px;
+  background-image: url("https://plantigotchi.s3.us-east-2.amazonaws.com/landscape_2.png");
+  background-size: cover;
 }
 
-.mainPageRender div{
+.mainPageRender div {
   flex: 1 1 33%;
-  max-width: 33vw; 
+  max-width: 33vw;
 }
 
 .humanPlantPic {
@@ -39,7 +39,7 @@ code {
   width: 50%;
 }
 
-.alienBox{
+.alienBox {
   padding-top: 175px;
 }
 
@@ -47,8 +47,8 @@ code {
   padding-top: 230px;
 }
 
-#root{
-  height: 100%; 
+#root {
+  height: 100%;
 }
 .mainPageRender {
   display: flex;
@@ -60,4 +60,8 @@ code {
 .parentWrapper {
   text-align: center;
   height: 100%;
+}
+
+.header {
+  background-image: url(../../public/landscape.png);
 }
