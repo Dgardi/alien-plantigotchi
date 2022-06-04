@@ -3,6 +3,7 @@ import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import Header from "../components/Header";
 import React from "react";
+import Footer from "../components/Footer";
 
 export default function LoginPage() {
   return (
@@ -38,6 +39,7 @@ export default function LoginPage() {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -69,9 +69,7 @@ export default function HumanPlant({ stage, setHumanPlantPhase }) {
             >
               🎶
             </button>
-            <p className="lifepoint">
-              This plant has: {lifePoints} life points
-            </p>
+            <p className="lifepoint">{lifePoints} life points</p>
           </div>
         );
       case "HumanStage2":
