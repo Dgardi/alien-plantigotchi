@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background-color: #e3870f;
+  /* background-color: #e3870f; */
   background-image: url("https://plantigotchi.s3.us-east-2.amazonaws.com/landscape_2.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,14 +54,14 @@ code {
   padding-top: 30px;
 }
 
-#root {
+/* #root {
   height: 100%;
-}
+} */
 
 .mainPageRender {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  /* gap: 50px; */
   padding: 20px;
 }
 
