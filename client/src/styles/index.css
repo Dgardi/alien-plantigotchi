@@ -37,7 +37,7 @@ code {
 }
 
 .humanPlantPic {
-  width: 36%;
+  width: 45%;
   padding-left: 30px;
 }
 
@@ -45,18 +45,6 @@ code {
   width: 50%;
   padding-left: 30px;
 }
-
-.alienBox {
-  padding-top: 25px;
-}
-
-.humanBox {
-  padding-top: 30px;
-}
-
-/* #root {
-  height: 100%;
-} */
 
 .mainPageRender {
   display: flex;
@@ -96,6 +84,8 @@ code {
 
 .lifepoint {
   padding-left: 70px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .characterBox {
