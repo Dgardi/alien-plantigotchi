@@ -3,6 +3,8 @@ const path = require("path");
 const db = require("./config/connection");
 const routes = require('./routes');
 const fs = require("fs");
+const jwt = require('jsonwebtoken');
+// require('dotenv').config()
 
 
 const app = express();

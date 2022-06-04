@@ -1,5 +1,8 @@
 const { User } = require("../models/index");
 
+const secret = 'mysecretssshhhhhhh';
+const expiration = '2h';
+
 module.exports = {
     // Object desctructuring the req arugment for easier access to req.body
     async createUser ({ body }, res) {
@@ -22,7 +25,7 @@ module.exports = {
                 return res.status(400).json({ message: 'Wrong password!' });
             }
 
-            res.status(200).json(user);
+           res.json({token: jwt.sign({email:user.email, username:user.username, _id:user._id}, secret, {expiresIn: expiration})})
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
