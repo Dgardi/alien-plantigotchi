@@ -44,15 +44,17 @@ export default function SignUp() {
   };
 
   return (
-    <div>
+    <div className="formBox">
       <form className="form">
+        <div className="account">Don't have an account?</div>
+        <div className="register">Register Now</div>
         <input
           className="inputBox"
           value={userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
-          placeholder="User Name"
+          placeholder="Create Username"
         />
         <br></br>
         <input
@@ -71,10 +73,14 @@ export default function SignUp() {
           onChange={handleInputChange}
           //DO WE NEED TO CHANGE THE TYPE???
           type="text"
-          placeholder="Password"
+          placeholder="Create Password"
         />
         <br></br>
-        <button type="button" onClick={handleFormSubmit}>
+        <button
+          className="createAccount"
+          type="button"
+          onClick={handleFormSubmit}
+        >
           Create Account
         </button>
       </form>

@@ -28,7 +28,7 @@ code {
 }
 
 .loginPageRender div {
-  flex: 1 1 49%;
+  flex: 1 1 33%;
 }
 
 .mainPageRender div {
@@ -104,5 +104,66 @@ code {
 
 .directions {
   text-align: center;
-  padding: 20px 30px 0px 30px;
+  padding: 20px 30px 20px 30px;
+}
+
+.loginBox,
+.signupBox,
+.directions {
+  border: 1px solid #0fe3e1;
+  height: 250px;
+  margin: 20px;
+  border-radius: 25px;
+}
+
+.formBox {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formBox form {
+  margin: 0;
+}
+
+.inputBox {
+  background-color: grey;
+  border-style: solid;
+  height: 1.5em;
+  width: 20em;
+}
+
+::placeholder {
+  color: white;
+  text-align: center;
+  opacity: 0.5;
+}
+.account {
+  font-size: 10px;
+}
+
+.register,
+.login {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.createAccount,
+.loginButton {
+  height: 1.5em;
+  width: 20em;
+  margin: 15px;
+  background-color: #0fe3e1;
+  border-style: solid;
+  border: 1px solid #0fe3e1;
+  color: grey;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.directionsHeader {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
