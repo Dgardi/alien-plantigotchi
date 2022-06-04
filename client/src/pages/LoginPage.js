@@ -21,24 +21,25 @@ export default function LoginPage() {
         <div className="parentWrapper signupBox">
           <SignUpForm />
         </div>
-        <div className="directions">
-          <div className="directionsHeader">Directions</div>
-          <p>
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam,
-            necessitatibus provident magnam deleniti labore aspernatur eum est
-            commodi sit dolor molestiae nesciunt quidem placeat, odit mollitia
-            cumque quas nulla?
-          </p>
-          <p>
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam,
-            necessitatibus provident magnam deleniti labore aspernatur eum est
-            commodi sit dolor molestiae nesciunt quidem placeat, odit mollitia
-            cumque quas nulla?
-          </p>
-        </div>
       </div>
+      <div className="directions">
+        <div className="directionsHeader">Directions</div>
+        <p>
+          {" "}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam,
+          necessitatibus provident magnam deleniti labore aspernatur eum est
+          commodi sit dolor molestiae nesciunt quidem placeat, odit mollitia
+          cumque quas nulla?
+        </p>
+        <p>
+          {" "}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam,
+          necessitatibus provident magnam deleniti labore aspernatur eum est
+          commodi sit dolor molestiae nesciunt quidem placeat, odit mollitia
+          cumque quas nulla?
+        </p>
+      </div>
+
       <Footer />
     </div>
   );
