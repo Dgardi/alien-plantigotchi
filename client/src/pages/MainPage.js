@@ -4,6 +4,7 @@ import HumanPlant from "../components/HumanPlant";
 import AlienActionButtons from "../components/AlienActionButtons";
 import Character from "../components/Character";
 import landscape from "../../src/assets/landscape.png";
+import Footer from "../components/Footer";
 // import Greenhouse from './components/Greenhouse';
 // import LoginForm from "./components/LoginForm";
 import LoginPage from "./LoginPage";
@@ -65,6 +66,7 @@ function MainPage() {
           </div>
         {/* </div> */}
       </div>
+      <Footer />
     </>
   );
 }

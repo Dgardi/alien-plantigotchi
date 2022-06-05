@@ -80,7 +80,7 @@ export default function AlienPlant({
             >
               🎶
             </button>
-            <p>This plant has: {lifePoints} life points</p>
+            <p className="lifepoint">{lifePoints} life points</p>
           </div>
         );
       case "AlienStage2":
@@ -123,7 +123,7 @@ export default function AlienPlant({
             >
               🎶
             </button>
-            <p>You have {lifePoints} life points</p>
+            <p className="lifepoint">{lifePoints} life points</p>
           </div>
         );
       case "AlienStage3":
@@ -166,7 +166,7 @@ export default function AlienPlant({
             >
               🎶
             </button>
-            <p className="lifepoint">Your plant has {lifePoints} life points</p>
+            <p className="lifepoint">{lifePoints} life points</p>
           </div>
         );
       default:
