@@ -42,7 +42,7 @@ function MainPage() {
     <>
       <Header />
       <div className="mainPageRender">
-        <div className="mainPageRender">
+        {/* <div className="mainPageRender"> */}
           <div className="characterBox">
             <Character className="character" />
           </div>
@@ -64,11 +64,14 @@ function MainPage() {
             {/* <button id="mainButton" onClick={() => {setHumanPlantPhase(humanPlantPhase + 1)}}>Increase</button> */}
             <HumanActionButtons />
           </div>
-        </div>
+        {/* </div> */}
       </div>
       <Footer />
     </>
   );
 }
+
+
+
 
 export default MainPage;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Auth from '../utils/auth'
 
 // import alienPlant_stage1 from "../../src/assets/alienPlant_stage1.png"
 // import alienPlant_stage2 from "../../src/assets/alienPlant_stage2.png"
