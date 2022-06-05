@@ -58,15 +58,17 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className="formBox">
       <form className="form">
+        <div className="account">Already have an account?</div>
+        <div className="login">Log In Here</div>
         <input
           className="inputBox"
           value={userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
-          placeholder="User Name"
+          placeholder="Username"
         />
         <br></br>
         <input
@@ -78,7 +80,11 @@ export default function Login() {
           placeholder="Password"
         />
         <br></br>
-        <button type="button" onClick={handleFormSubmit}>
+        <button
+          className="loginButton"
+          type="button"
+          onClick={handleFormSubmit}
+        >
           Login
         </button>
       </form>
