@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Auth from '../utils/auth'
 // import '../styles/styles.css';
 
 export default function SignUp() {

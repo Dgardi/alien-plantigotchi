@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Auth from '../utils/auth'
 
 // import alienPlant_stage1 from "../../src/assets/alienPlant_stage1.png"
 // import alienPlant_stage2 from "../../src/assets/alienPlant_stage2.png"
@@ -31,11 +32,9 @@ export default function AlienPlant({
       setAlienPlantPhase(2);
     } else if (lifePoints >= 20 && lifePoints < 30) {
       setAlienPlantPhase(3);
-    } else if (lifePoints >= 30 && lifePoints < 40) {
+    } else if (lifePoints >= 30) {
       setAlienPlantPhase(4);
-    } else if (lifePoints >= 40) {
-      setAlienPlantPhase(5);
-    }
+    } 
   }, [lifePoints]);
   const expr = () => {
     switch ("AlienStage1") {
