@@ -32,11 +32,9 @@ export default function AlienPlant({
       setAlienPlantPhase(2);
     } else if (lifePoints >= 20 && lifePoints < 30) {
       setAlienPlantPhase(3);
-    } else if (lifePoints >= 30 && lifePoints < 40) {
+    } else if (lifePoints >= 30) {
       setAlienPlantPhase(4);
-    } else if (lifePoints >= 40) {
-      setAlienPlantPhase(5);
-    }
+    } 
   }, [lifePoints]);
   const expr = () => {
     switch ("AlienStage1") {

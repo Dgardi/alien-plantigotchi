@@ -41,23 +41,7 @@ export default function Login() {
     };
 
     // Runs loginUser fetch request with userData object
-    try {
-      const response = await loginUser(userData);
-
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
-      // parse response so it comes back as an accessible User document
-      const user = await response.json();
-
-      
-      updateUser(user);
-
-      nav("/home");
-    } catch (err) {
-      console.log(err);
-    }
+    nav("/home");
   };
 
   return (
