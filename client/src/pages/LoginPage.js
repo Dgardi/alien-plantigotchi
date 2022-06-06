@@ -25,18 +25,22 @@ export default function LoginPage() {
       <div className="directions">
         <div className="directionsHeader">Directions</div>
         <p>
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam,
-          necessitatibus provident magnam deleniti labore aspernatur eum est
-          commodi sit dolor molestiae nesciunt quidem placeat, odit mollitia
-          cumque quas nulla?
+          Welcome to Plant Planet, home to several strange and wonderful plant
+          specimens.
         </p>
         <p>
           {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam,
-          necessitatibus provident magnam deleniti labore aspernatur eum est
-          commodi sit dolor molestiae nesciunt quidem placeat, odit mollitia
-          cumque quas nulla?
+          You are the caretaker and it is your job to care for each plant and
+          help it grow. Water them, fertilize them, give them sunlight, or even
+          sing to them by clicking the buttons below each plant. Your choices
+          may help increase the plant's life points...or they may not help at
+          all.
+        </p>
+        <p>
+          {" "}
+          When each plant has acquired enough life points, it will level up to
+          the next stage in its life cycle. Play through each plant to watch
+          them bloom!
         </p>
       </div>
 
