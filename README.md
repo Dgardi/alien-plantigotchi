@@ -29,6 +29,9 @@ npm i
 
 ## Usage
 
+The app is deployed to heroku for your enjoyment.
+URL: https://alien-plantigotchi.herokuapp.com/
+
 ### `npm start`
 
 Runs the app in the development mode.\
