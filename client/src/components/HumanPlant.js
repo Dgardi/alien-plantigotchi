@@ -16,13 +16,9 @@ export default function HumanPlant({ stage, setHumanPlantPhase }) {
       setHumanPlantPhase(0);
     } else if (lifePoints >= 5 && lifePoints < 10) {
       setHumanPlantPhase(1);
-    } else if (lifePoints >= 10 && lifePoints < 20) {
+    } else if (lifePoints >= 10) {
       setHumanPlantPhase(2);
-    } else if (lifePoints >= 20 && lifePoints < 30) {
-      setHumanPlantPhase(3);
-    } else if (lifePoints >= 30) {
-      setHumanPlantPhase(4);
-    }
+    } 
   }, [lifePoints]);
 
   const expr = () => {
