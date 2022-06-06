@@ -5,7 +5,6 @@ import Header from "../components/Header";
 import React from "react";
 import Footer from "../components/Footer";
 
-
 export default function LoginPage() {
   return (
     <div>
@@ -40,8 +39,20 @@ export default function LoginPage() {
         <p>
           {" "}
           When each plant has acquired enough life points, it will level up to
-          the next stage in its life cycle. Play through each plant to watch
+          the next stage in its growth cycle. Play through each plant to watch
           them bloom!
+        </p>
+        <div className="directionsHeader">Points and Leveling Up</div>
+        <p>
+          Our featured plants are currently the flower and the cactus.
+          <p>
+            Flower: 5 lifepoints to advance growth of plant | 3 growth stages to
+            reach full growth{" "}
+          </p>
+          <p>
+            Cactus: 10 lifepoints to advance growth of plant | 5 growth stages
+            to reach full growth
+          </p>
         </p>
       </div>
 

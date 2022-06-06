@@ -95,11 +95,13 @@ code {
 .directions {
   text-align: center;
   padding: 20px 30px 20px 30px;
+  border: 1px solid #0fe3e1;
+  margin: 20px;
+  border-radius: 25px;
 }
 
 .loginBox,
-.signupBox,
-.directions {
+.signupBox {
   border: 1px solid #0fe3e1;
   height: 250px;
   margin: 20px;
@@ -156,6 +158,7 @@ code {
   font-size: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 footer {
@@ -165,4 +168,14 @@ footer {
   width: 100%;
   padding-bottom: 10px;
   font-size: small;
+}
+
+.createAccount:hover,
+.loginButton:hover {
+  background-color: #feb056;
+  cursor: pointer;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
