@@ -13,9 +13,8 @@ Plantagotchi is a new app that puts a fun new twist on evolution games like Poke
 
 * [License](#license)
 
-* [Contributing](#contributing)
+* [Contributors](#Contributors)
 
-* [Tests](#tests)
 
 * [Questions](#questions)
 
@@ -55,14 +54,18 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 This project is licensed under the MIT license.
   
-## Contributing
+## Contributors
 
-Future iterations will include JWT and settings timers for different actions. 
+Robert Slocumbe - Server, database, models, routes, JWT
+David Gardiner - Routes, server, AWS S3 bucket, JWT
+Devyn Blackstone - Frontend/CSS, routes, login, point levels
+Sarah Gilbreath - Art/design, front end/CSS, components, button event handlers, point levels, login 
 
 
 
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at Dgardi@gmail.com. You can find more of my work at [Dgardi](https://github.com/Dgardi/).
+If you have any questions about the repo, open an issue by reaching out to our team at Dgardi@gmail.com
 
+![plantagotchi](./client/src/assets/plantagotchi.png)
